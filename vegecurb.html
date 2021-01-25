@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VC:ADMINVEG</title>
+    <style>
+    body {
+      background-image: url(http://localhost/phpdemo/vc/admin/curb.jpg);
+       background-size: cover;
+      color: white; ;
+    }
+    </style>
+</head>
+<body>
+    <form action="http://localhost/phpdemo/vc/u.php" style="border:1px solid #ccc" method="post">
+        <div class="container">
+          <h1>Admin panel</h1>
+          <p>To perform the INSERT UPDATE DELETION OPERATIONS</p>
+          <hr>
+      
+          <label for="id"><b>id</b></label>
+          <input type="text" placeholder="Enter id" name="id" required>
+      
+          <label for="vegetablename"><b>veg name</b></label>
+          <input type="text" placeholder="Enter vegetablename" name="vegetablename" >
+      
+          <label for="price"><b>Price</b></label>
+          <input type="text" placeholder="price" name="price" >
+      
+            <input type="submit" name="UPDATE" value="update" />
+            <input type="submit" name="DELETE" value="delete" />
+            <input type="submit" name="submit" value="insert" />
+          </div>
+    
+      </form> 
+      <button onclick="window.location.href='http://localhost/phpdemo/vc/display.html';">
+        Back
+      </button>
+</body>
+</html>

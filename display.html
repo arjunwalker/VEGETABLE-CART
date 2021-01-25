@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>admin:Vegetablecart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 1px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#logout{
+  margin-left: 90%;
+  color : white;
+  background-color : blue;
+  
+}
+body {
+      background-image: url(http://localhost/phpdemo/vc/admin/adminpage.jpg);
+       background-size: cover;
+      color: white; ;
+    }
+</style>
+</head>
+<body>
+
+<h1>welcome to admin panel</h1>
+<h3>Hover over the image below:</h3>
+<div class="row">
+    <div class="column">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="admin/view.gif" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <p>To View All </p> 
+      <p>User Details</p>
+      <button onclick="window.location.href='http://localhost/phpdemo/vc/displayuser.php';">
+      Click Here 
+    </button>
+    </div>
+  </div>
+</div>
+</div>
+ <div class="column">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="admin/write.gif" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <p>To Perfrom CURD Operation On </p> 
+            <p>User Details</p>
+            <button onclick="window.location.href='http://localhost/phpdemo/vc/usercurb.html';">
+            Click Here 
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="column">
+<div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="admin/veg.gif" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <p>To View All </p> 
+        <p>Vegetable Details</p>
+        <button onclick="window.location.href='http://localhost/phpdemo/vc/displayveg.php';">
+        Click Here 
+      </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="column">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="admin/typing.gif" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <p>To Perfrom CURD Operation On </p> 
+            <p>Vegetable Details</p>
+            <button onclick="window.location.href='http://localhost/phpdemo/vc/vegecurb.html';">
+            Click Here 
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+       </div>
+    <br> <br>
+    <button id="logout" onclick="window.location.href='http://localhost/phpdemo/vc/logout.html';">
+            logout
+          </button>
+</body>
+</html>

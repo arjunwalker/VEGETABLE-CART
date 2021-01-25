@@ -1,0 +1,262 @@
+/*global variables*/
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+/*header*/
+header{
+	color: #66d9ff;
+	padding-top: 30px;
+	min-height: 100px;
+	background: #35424A;
+}
+.container{
+	width: 80%;
+	margin: auto;
+}
+header ul{
+	margin: 10px;
+	padding: 0;
+}
+header li{
+	display: inline;
+	padding: 0 30px 0 30px;
+}
+header a{
+	color: #66d9ff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: 'Kulim Park', sans-serif;
+}
+header #branding{
+	float: left;
+}
+header #branding h1{
+	margin: 0;
+	font-size: 3.5em;
+	font-family: 'Alegreya SC', serif;
+	text-shadow:
+		-1px -1px 0 #fff,
+		1px -1px 0 #fff,
+		-1px 1px 0 #fff,
+		1px 1px 0 #fff;
+}
+header nav{
+	float: right;
+	margin-top: 20px;
+}
+header .highlight, header .current a, .current{
+	color: #0066ff;
+	font-weight: bold;
+}
+header a:hover{
+	color: #000;
+	font-weight: bold;
+	background: lightgrey;
+}
+
+/*dropdown bar*/
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+  display: block;
+}
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*main display*/
+.main-display{
+    margin: 0 auto;
+    padding: 0 1.5em;
+	border-top: solid 3px #000;
+	background-image: url("images/texture.jpg");
+    background-size: cover;
+}
+.label{
+	text-align: center;
+	font-size: 2.5em;
+	font-family: 'Alegreya SC', serif;
+	color: lightgrey;
+}
+.store-items{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*individual item containers*/
+.shop-item{
+	margin: 0;
+	padding: 20px;
+}
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: lightgrey;
+	font-family: 'Kulim Park', sans-serif;
+    margin-bottom: 15px;
+}
+.box{
+	height: 300px;
+	width: 300px;
+}
+.shop-item-image{
+	max-height: 100%;
+	width: 100%;
+}
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.shop-item-price {
+    flex-grow: 1;
+    color: lightgrey;
+	font-family: 'Kulim Park', sans-serif;
+}
+/*buttons*/
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+	font-family: 'Kulim Park', sans-serif;
+	color: #fff;
+}
+.btn-primary {
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+/*cart section*/
+.cart-display{
+    margin: 0;
+    padding: .5em 4.5em;
+	font-family: 'Kulim Park', sans-serif;
+	background-image: url("images/texture2.jpg");
+    background-size: cover;
+}
+.cart-display h1{
+	text-align: center;
+	font-size: 2.5em;
+	font-family: 'Alegreya SC', serif;
+	color: #333;
+}
+.cart-row {
+    display: flex;
+}
+.cart-item {
+    width: 45%;
+}
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+.cart-quantity {
+    width: 35%;
+}
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-right: 20px;
+}
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+.btn-purchase {
+    display: block;
+    margin: 20px auto 40px auto;
+    font-size: 1em;
+}
+
+/*javascript appears*/
+.cart-item-title{
+	padding: 10px;
+}
+.cart-quantity-input{
+	width: 50px;
+}
+.btn-danger{
+	color: #000;
+}
+
+/*footer*/
+footer{
+	padding: 20px;
+	color: #fff;
+	background: #35424A;
+	text-align: center;
+}
+
+/*media queries*/
+@media(max-width: 1200px){
+	header #branding, header nav, header nav li{
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+	header{
+		padding-bottom: 20px;
+	}
+}
+@media(max-width: 500px){
+	.cart-item span{
+		width: 33%;
+	}
+	.cart-price span{
+		width: 33%;
+	}
+	.cart-quantity span{
+		width: 33%;
+	}
+	/*
+	.cart-quantity-input, .btn-danger{
+		display: none;
+	}*/
+}
